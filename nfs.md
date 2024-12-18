@@ -43,6 +43,7 @@ nfs setting
         sudo systemctl restart nfs-kernel-server.service
 
 4.
+
     client side
         sudo apt install nfs-command
         mkdir /mnt/nfs
@@ -53,6 +54,7 @@ nfs setting
     df -h
 
 5.
+
     permanent 
         vim /etc/fstab
             192.168.80.100:/mnt/nfs /mnt/nfs nfs defaults 0 0
