@@ -50,7 +50,7 @@ nfs setting
         chmod 777 /mnt/nfs
         mount 192.168.80.100:/mnt/nfs /mnt/nfs
 
-df -h
+    df -h
 
 5.
     permanent 
