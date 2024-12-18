@@ -26,8 +26,8 @@
 ### set nameserver
 
     cd /etc
-    <!-- resolv.conf is a link in ubuntu 22.4 -->
-    <!-- remove resolv.conf-->
+<!-- resolv.conf is a link in ubuntu 22.4 -->
+<!-- remove resolv.conf-->
     sudo rm -rf resolv.conf
     touch /etc/resolv.conf
     vim resolv.conf
