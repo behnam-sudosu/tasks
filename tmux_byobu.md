@@ -9,6 +9,9 @@
 	tmux ls
 	<!-- you can see you tmux session -->
 	tmux att -t (number of session)
+	tmux new
+	tmux new-session
+	tmux kill-session -t namesession
 	<!-- close tmux -->
 	ctrl + d 
 	
