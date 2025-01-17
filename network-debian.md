@@ -1,5 +1,5 @@
 <!-- network setting -->
-# config network 
+# config network Debian
 ### set ip static for debian
 1.
     cd /etc/network
