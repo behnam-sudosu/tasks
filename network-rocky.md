@@ -1,5 +1,5 @@
 <!-- network setting -->
-# config network 
+# config network Rocky
 ### set ip static for rocky
 
 1.
