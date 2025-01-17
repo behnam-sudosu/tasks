@@ -1,6 +1,6 @@
-#tmux
+# tmux
 	
-##tmux help you if disconnect from server
+## tmux help you if disconnect from server
 	
 	
 	sudo apt install tmux
@@ -17,9 +17,9 @@
 	
 	
 	
-#byobu
+# byobu
 
-##byobu help you if disconnect from server
+## byobu help you if disconnect from server
 
 	sudo apt install byobu
 	byobu
