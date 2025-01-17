@@ -1,5 +1,5 @@
 <!-- network setting -->
-# config network 
+# config network Ubuntu
 ### set ip static for ubuntu
 1.
     cd /etc/netplan/
