@@ -1,5 +1,5 @@
 <!-- network setting -->
-# config network 
+# config network Centos
 ### set ip static for centos
 1.
 
