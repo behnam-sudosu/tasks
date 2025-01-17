@@ -41,12 +41,12 @@
         <!-- rename -->
         vgrename (myvg) (vg-ssd)
 
-## Logical Volue(LV)
+## Logical Volume(LV)
         lvdiaplay
         or
         lvs
         <!-- create -->
-        lvreate --name lvdisk1 --size 12G vg-ssd
+        lvcreate --name lvdisk1 --size 12G vg-ssd
         or
         lvcreate -l 100%FREE -n vg-ssd
         <!-- remove -->
