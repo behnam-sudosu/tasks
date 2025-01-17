@@ -1,8 +1,6 @@
-nfs setting
+# nfs setting
 
-1.
-
-    vim /etc/netplan/*.yaml
+## 1.vim /etc/netplan/*.yaml
     <!-- set IP static -->
     # Let NetworkManager manage all devices on this system
     network:
@@ -17,18 +15,14 @@ nfs setting
     save the file
     sudo netplan try
 
-2.
-
-    change hostname
+## 2.change hostname
 
     <!-- first use this command -->
         hostnamectl set-hostname srv1
     <!-- second editing this file  -->
         vim /etc/hosts or vim /etc/hostname
 
-3.
-
-    server side
+## 3.server side
         <!-- ip server is 192.168.80.100 -->
         sudo apt install nfs-kernel-server
         sudo apt install nfs-common
@@ -42,9 +36,7 @@ nfs setting
         exportfs -a # this is a command
         sudo systemctl restart nfs-kernel-server.service
 
-4.
-
-    client side
+## 4.client side
         sudo apt install nfs-command
         mkdir /mnt/nfs
         chown nobody:nogroup /mnt/nfs
@@ -53,9 +45,7 @@ nfs setting
 
     df -h
 
-5.
-
-    permanent 
+## 5.permanent 
         vim /etc/fstab
             192.168.80.100:/mnt/nfs /mnt/nfs nfs defaults 0 0
         mount -a
