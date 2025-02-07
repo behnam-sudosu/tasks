@@ -51,9 +51,14 @@
     mysql -u root -p
         source /home/behnam/world_x.sql
 ### second    
-    mysql -u root -p < /home/behnam/world_x.sql
+    mysql -u root -p mydatabase < /home/behnam/world_x.sql
 
-
-
+## export
+    mysqldump -u root -p mydatabase > /tmp/mybackup-database.sql
+    mysqldump -u root -p mydatabase | gzip > /tmp/mybackup-database.sql.gz ===>> make zip file
+### crontab
+    sudo crontab -e
+        00 23 * * * mysqldump -u root -p mydatabase | gzip > /tmp/mydatabase.sql.gz ===> make zip file
+        00 23 * * * mysqldump -u root -p mydatabase > /tmp/mydatabase.sql
 
 
