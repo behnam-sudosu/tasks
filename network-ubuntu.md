@@ -38,5 +38,9 @@
 #### also you can add nameserver to /etc/netplan/*.yaml too
 
 
-
+## route
+#### you can change gateway4 to this
+    routes:
+        - to: default
+          via: 192.168.0.1
 
