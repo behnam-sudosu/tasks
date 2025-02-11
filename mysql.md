@@ -2,7 +2,10 @@
     sudo apt update
     sudp apt install mariadb-server
 
-    
+# more info
+    data save ===>> /var/lib/mysql ===>> you have mount this directory to another dis
+    config file ===>> /etc/mysql/mariadb.cnf
+
 ## secure you're mariadb
     mysql_secure_installation
         root password ===>> enter if you don't have password
@@ -15,7 +18,6 @@
         remove test database ===>> yes
         reload privilege tables now ===>> yes
     
-
 ## comman check your mysql
     systemctl status mariadb.service
     systemctl start mariadb.service
