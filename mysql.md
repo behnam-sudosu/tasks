@@ -56,6 +56,7 @@
     mysql -u root -p mydatabase < /home/behnam/world_x.sql
 
 ## export
+    mysqldump -u root -p --all database /tmp/mybackup.sql
     mysqldump -u root -p mydatabase > /tmp/mybackup-database.sql
     mysqldump -u root -p mydatabase | gzip > /tmp/mybackup-database.sql.gz ===>> make zip file
 ### crontab
