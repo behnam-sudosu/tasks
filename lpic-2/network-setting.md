@@ -84,6 +84,63 @@
 	netcat
 		server ===>> nc -l 5000 ===>> open port
 		client telnet 192.168.1.100 5000 ===>> ip server
+	for trobleshoot
+	
+## ping
+	ping 8.8.8.8
+	ping -c	===>> count
+	ping -i 3 ===>> 3 second
+	
+## tcpdump
+	tcpdump ===>> show all packet tcp in your system
+	tcpdump -D ===>> show all interface
+	tcpdump -i ens37 ===>> only packate interface ens37
+	tcpdump -c 10 -i ens37 ===>> show only 10 the last
+	tcpdump -w file.pcap -i ens37 ===>> w == save file 
+	pcap file can read by wireshark too is perfosional
+	tcp -r file.pcap ===>> read the file
+	tcpdumo -i ens37 tcp ===>> show only tcp
+	tcpdump -i ens37 port 80 ===>> show only port 80
+	tcpdump -i ens37 src 192.1681.1.100 ===>> lisen on router
+	tcpdump -i ens37 dst 192.168.10.0 ===>> dgkala ip who goes to it
+	
+## nmap
+	nmap ===>> port scan
+	apt install nmap
+	nmap 192.168.1.100
+	nmap google.com
+	nmap 192.168.1.0-255 ===>> range ip
+	nmap 192.168.1.100/24
+	vim ips
+		192.168.1.100
+		192.168.1.110
+	nmap -iL ips ===>> for run file
+	nmap -p 22 192.168.1.100
+	nmap -p 1-200 192.168.1.100 ===>> range port
+	nmap -F ===>> fast scan
+	nmap -p- 192.168.1.100 ===>> scan all port
+	65535 ===>> we have port
+		0-1024 ===>> system port
+		1024-49151 ===>> user port
+		49152-65535 ===>> private port
+		
+## name server	
+	vim /etc/hosts
+		192.168.1.200 google.com ===>> set DNS
+	vim /etc/resolv.conf ===>> set DNS
+		nameserver 8.8.8.8
+	vim /etc/netplan/*.yaml
+		namservers:
+		  addresses: [8.8.8.8]
+
+## trobleshoot
+	apt install traceroute
+	traceroute
+	traceroute 8.8.8.8
+	traceroute -i ens37 google.com
+	traceroute google.com -w 2 ===>> wait 2 second
+	tracepath 8.8.8.8
+	mtr 8.8.8.8
 	
 	
 	
