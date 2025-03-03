@@ -71,7 +71,15 @@
                 /etc/disk/by-uuid/(UUID) /mnt ext4 defaults 0 0
         mount -a
 
+## snap shot lvm
+	lvcreate -s --size 100M mysnap01 /dev/myvg/lvo1 ===>> create snap shot
+	lvconvert --merge /dev/myvg/mysnap01 ===>> recovery
 
+## lvm config
+	vim /etc/lvm/lvm.conf ===>> backup nad archive log
+	/dev/maper
+	/etc/fstab
+	/dev/disk/by-uuid
 
 
 
