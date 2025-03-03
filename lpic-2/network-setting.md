@@ -50,7 +50,40 @@
 ### wireless
 	apt install wireless-tools
 	iwconfig
+	arp ===>> show ip
+	arp -a
+	arp -v
+	arp -s 192.168.1.110 aa:bb:cc:dd:ff ===>> add ip address
+	arp -d aa:bb:cc:dd:ff
 	
+## permanent
+	ubuntu ===>> vim /etc/netplan/*.yaml
+	debian ===>> vim /etc/network/interfaces
+	redhat ===? vim /etc/sysconfig/network-script/ifcfg-ens37
+	
+# port
+### netstat
+	netstat	===>> show all port
+	netstat -a ===>> all
+	netstat -t ===>> tcp
+	netstat -u ===>> udp
+	netstat -n ===>> number
+	netstat -l ===>> list
+	netstat -p ===>> protocol
+	netstat -tuna
+
+### ss
+	ss -a ===>> all
+	ss -t ===>> tcp
+	ss -u ===>> udp
+	ss -n ===>> number
+	ss -l ===>> list
+	ss -p ===>> number
+	
+## open port
+	netcat
+		server ===>> nc -l 5000 ===>> open port
+		client telnet 192.168.1.100 5000 ===>> ip server
 	
 	
 	
