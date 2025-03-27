@@ -3,6 +3,8 @@
 	config file ===>> /etc/nginx
 	rhel ===>> nginx
 	config file ===>> /etc/nginx
+	nginx -t ===>> check config file
+	nginx -? ===>> help
 	
 ## module
 
@@ -135,3 +137,32 @@
 	make link to site-enabled
 	systemctl restart nginx
 	
+# proxy pass
+	/etc/nginx/
+	proxy_params
+	cd sites-available
+	vim example.com
+		server {
+			listen 80;
+			server_name example.com;
+			location /{
+			proxy_pass https://yahoo.com;
+			}
+		}
+	save file
+	vim /etc/hosts
+		192.168.1.199 example.com
+		127.0.0.1 example.com
+	save file
+	ln -s /sites-available/example.com ../sites-enabled
+	nginx -t
+	service nginx restart or reload
+	
+	see site in terminal
+		sudo apt install elinks
+		elinks http://example.com
+
+
+
+
+
