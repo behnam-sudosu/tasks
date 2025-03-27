@@ -101,5 +101,37 @@
 	systemctl restart nginx
 	
 
+# redirect
+	/var/www/html
+	mkdir dir1
+	mkdir redirect
+		vim file.htm
+			"redirect"
+	vim /etc/nginx/sites-enabled/000-default.conf
+		# redirect
+		Redirect /dir1 /redirect
+	systemctl restart nginx
 
+
+# virtualhost
+	in one server you can bring up some website
+	/etc/nginx/sites-avilable
+	vim site1.cong
+		<VirtualHOst 192.168.1.100:80>
+		ServerAdmin info@site1.com
+		DocumentRoot /var/www/html/site1
+		ServerName site1.com
+		</VirtualHost>
+	save file
+	make link to site-enabled
+	systemctl restart nginx
+	vim site2.cong
+		<VirtualHOst 192.168.1.200:80>
+		ServerAdmin info@site2.com
+		DocumentRoot /var/www/html/site2
+		ServerName site2.com
+		</VirtualHost>
+	save file
+	make link to site-enabled
+	systemctl restart nginx
 	
