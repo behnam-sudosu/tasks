@@ -117,6 +117,39 @@
 	auto index = on ===>> you can download
 	/etc/apache2/apache2.conf
 
+# redirect
+	/var/www/html
+	mkdir dir1
+	mkdir redirect
+		vim file.htm
+			"redirect"
+	vim /etc/apache2/sites-enabled/000-default.conf
+		# redirect
+		Redirect /dir1 /redirect
+	systemctl restart apache2
+
+
+# virtualhost
+	in one server you can bring up some website
+	/etc/apache2/sites-avilable
+	vim site1.cong
+		<VirtualHOst 192.168.1.100:80>
+		ServerAdmin info@site1.com
+		DocumentRoot /var/www/html/site1
+		ServerName site1.com
+		</VirtualHost>
+	save file
+	a2ensite site1 ===>> enable this site
+	systemctl restart apache2
+	vim site2.cong
+		<VirtualHOst 192.168.1.200:80>
+		ServerAdmin info@site2.com
+		DocumentRoot /var/www/html/site2
+		ServerName site2.com
+		</VirtualHost>
+	save file
+	a2ensite site1 ===>> enable this site
+	systemctl restart apache2
 
 
 
