@@ -31,7 +31,9 @@
 # acl ===>> access control
 	acl GOOGle dstdomain googl.com # deny only google.com
 	acl GOOGle dstdomain .googl.com # deny google.com and all subdomains
-# http_access
+	acl PRIVATE src 192.168.1.0/24
+
+# http_access ===>> which acl deny or allow
 	http_access deny !Safe_ports	
 	http_access deny connect !SSL_ports ===>> only port 443
 	http_access deny GOOGLE ===>> set rule
