@@ -44,5 +44,20 @@
 save file
 service squid restart
 
+# user&pass
+	apt install apache2-utils
+	cd /usr/lib/squid
+		basic_ncsa_auth
+	vim /etc/squid.conf
+		auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/userfile
+	htpasswd -c /etc/squid/userfile user1
+		New password:
+	htpasswd userfile user2
+		New password:
+	acl AUTHENTICATED proxy_auth REQUIERD
+	http_access allow AUTHENTICATED
+	save file
+	service squid restart
+	
 
 
