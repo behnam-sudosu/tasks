@@ -78,7 +78,9 @@
               modul
     ansible -m command -a "uptime" -i servers.ini all
 	ansible -m command -a "uname -a" -i servers.ini all
-	ansible -m command -a "reboot" -i servers.ini all
+	ansible -m command -a "sudo reboot" -i servers.ini all
+    ansible -m command -a "touch /tmp/backup" -i servers.ini all
+	ansible -m command -a "cp /etc/passwd /tmp/passwdbk" -i servers.ini all
                         excute   
 
 
