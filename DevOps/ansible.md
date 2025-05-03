@@ -72,11 +72,14 @@
             all, db, web     direction directory
 
 # moduls
-    ansible -m ping all -i /home/behnam/workspace/servers.ini
-    ansible -m ping db -i /home/behnam/workspace/servers.ini
-	ansible -m ping web -i /home/behnam/workspace/servers.ini
+    ansible -m ping all -i servers.ini
+    ansible -m ping db -i servers.ini
+	ansible -m ping web -i servers.ini
               modul
-
+    ansible -m command -a "uptime" -i servers.ini all
+	ansible -m command -a "uname -a" -i servers.ini all
+	ansible -m command -a "reboot" -i servers.ini all
+                        excute   
 
 
 
