@@ -6,7 +6,7 @@
     ir.pool.ntp.org
 
     apt update && apt install ntp
-    apt install chrony ===>> same ad ntp
+    apt install chrony ===>> same as ntp
 
     systemctl status ntp.service
     ntpq -p ===>> show information
