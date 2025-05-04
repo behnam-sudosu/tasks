@@ -1,9 +1,12 @@
 # fail2ban
     sudo apt update && sudo apt install fail2ban
+    
     cd /etc/fail2ban
         /filter.d ===>> config file all application
     systemctl status fail2ban.service ===>> it's not active
+    
     touch jail.local
+
     vim jail.local
         [sshd]
         enabled = true
