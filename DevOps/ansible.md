@@ -81,7 +81,22 @@
 	ansible -m command -a "sudo reboot" -i servers.ini all
     ansible -m command -a "touch /tmp/backup" -i servers.ini all
 	ansible -m command -a "cp /etc/passwd /tmp/passwdbk" -i servers.ini all
-                        excute   
+                        excute 
+  vim file1.txt
+		behnam	
+	sndiblr sll -m copy -a "src=/home/behnam/file1.txt dest=/home/milad/file1.txt" -i servers.ini
+		local place
+	sndiblr sll -m copy -a "src=/home/behnam/file1.txt dest=/home/milad/file1.txt" -i servers.ini --become --becomeuser root --become-method sudo ===>> switch user
+	sndiblr sll -m copy -a "src=/home/behnam/file1.txt dest=/home/milad/file1.txt" -i servers.ini --become --becomeuser root --become-method sudo --ask-become-pass ===>> ask password root
+	ansible all -m apt -a "name=nginx atate=present" --become -i servers.ini
+	ansible all -m apt -a "name=nginx=4.1.4 atate=present" --become -i servers.ini
+	ansible all -m apt -a "name=nginx atate=absent " --become -i servers.ini
+	absent ===>> delete
+	present ===>> install
+	ansible all -m apt -a "upgrade=yes update_cache=yes" --become -i servers.ini 
+	
+	modul command why we have modul shell ===>> you can't redirect, append, pipe, ;, &&, ||
+	row modul ===>> can command in no have python system like sisco
 
 
 
