@@ -97,7 +97,10 @@
 	
 	modul command why we have modul shell ===>> you can't redirect, append, pipe, ;, &&, ||
 	row modul ===>> can command in no have python system like sisco
-
+  
+  ansible all -m shell -a "cat /etc/passwd | wc -l" --become -i servers.ini
+	ansible all -m shell -a "mkdir /backup" --become -i servers.ini
+	ansible all -m shell -a "cp -r /etc /backup" --become -i servers.ini
 
 
 
