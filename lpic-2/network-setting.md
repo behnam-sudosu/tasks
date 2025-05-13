@@ -133,7 +133,7 @@
 		namservers:
 		  addresses: [8.8.8.8]
 
-## trobleshoot
+## troubleshoot
 	apt install traceroute
 	traceroute
 	traceroute 8.8.8.8
