@@ -5,7 +5,8 @@
 	distributed (scale) ===>> if you have 100G storage you you can use 150G
 	client and server conection NFS, Gluster
 
-# server side	
+# replicated
+## server side	
 	
 ## config server
 ### set ip
@@ -87,4 +88,21 @@
 	echo "gl3:/mn/glusterfs/vol1 /mnt/vol1 glusterfs defaults 00" >> /etc/fstab
 	mount -a
 	sudo systemctl daeman-reload
-	df -h 
+	df -h
+
+# Delete glusterfs
+	gluster volume list
+	gluster volume info vol1
+	gluster volume status
+
+## client side
+	umount /mnt/vol1
+
+## server side
+	gluster volume stop vol1
+	gluster volume info vol1
+	gluster volume vol1
+	gluster volume list
+	vim /etc/fstab
+		comment line
+	
