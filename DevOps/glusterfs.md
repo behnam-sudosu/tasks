@@ -101,8 +101,88 @@
 ## server side
 	gluster volume stop vol1
 	gluster volume info vol1
-	gluster volume vol1
+	gluster volume delete vol1
 	gluster volume list
 	vim /etc/fstab
 		comment line
+
+# distributed
+	
+## server side
+	gluster volume list
+	gluster volume status
+	gluster volume create vol2 g1:/glustervolume/vol2 g2:/glustervolume/vol2 g3:/glustervolume/vol2
+	gluster volume start vol2
+	gluster volume status vol2
+	gluster volume info vol2
+		type: distribute
+
+## client side
+	vim /etc/fstab
+		gl3:/vol2 /mnt/vol2 glusterfs default 0 0
+	save file
+	systemctl daemon-reload
+	mount -a
+	df -h
+	
+# delete
+
+## client
+	umaount /mnt/vol2
+	vim /etc/fstab
+		comment line
+	
+## server
+	gluster volume stop vol2
+	gluster volume status
+	gluster volume info vol2
+	gluster colume delete vom2
+
+# set limited
+	
+## server
+	gluster volume create vol1 replica 3 g1:/glustervolume/vol1 g2:/glustervolume/vol1 g3:/glustervolume/vol1
+	gluster volume list
+	gluster volume info
+	gluster volume start vol1
+
+## client
+	vim /etc/fstab
+		gl3:/vol2 /mnt/vol2 glusterfs default 0 0
+	systemctl daemen-reload
+	mount -a
+	df -h
+
+## server
+	gluster volume quota vol1 list
+	gluster volume quota vol1 enable
+	gluster volume limit-usage / 50MB
+	df -hP .
+	head -c 5-MB /dev/zero > file1 ===>> make file with 50MB 
+	du -sh * ===>> show directory hajm
+	mkdr dir1 dir2
+	gluster volume quota vol1 limit-usage /dir1 10MB
+	gluster volume quota vol1 limit-usage /dir2 10MB
+	
+# resize
+
+## server
+	gluster volume list
+	gluster volume info vol1
+	gluster volume create vol2 g1:/glustervolume/vol2 g2:/glustervolume/vol2 g3:/glustervolume/vol2
+	gluster volume start vol2
+	gluster volume status vol2
+	gluster volume info vol2
+	
+## client
+	vim /etc/fstab
+		gl3:/vol2 /mnt/vol2 glusterfs default 0 0
+	systemctl daemon-reload
+	mount -a
+	df -h
+	
+
+
+
+
 	
