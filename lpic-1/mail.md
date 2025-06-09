@@ -1,4 +1,5 @@
-# mail 
+# mail
+    
     MTA ===>> mail transfer agent
     qmail ===>> best one and no one hacked this
     apt update && apt install mailutils
