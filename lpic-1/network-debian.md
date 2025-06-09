@@ -1,4 +1,3 @@
-<!-- network setting -->
 # config network Debian
 ### set ip static for debian
 1.
@@ -6,6 +5,7 @@
 
 2.
     vim interfaces
+
         # The loopback network interface
         auto lo
         iface lo inet loopback
@@ -22,7 +22,7 @@
 3.
     sudo systemctl restart networking.service
 
-### set nameserver
+### set nameservers
 
     cd /etc
     vim resolv.conf
