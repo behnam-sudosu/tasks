@@ -16,9 +16,11 @@
 
 2.
 
-## use this command
+## command
     systemctl set-default (number of runlevel)
     <!-- the number must be between 1 and 6 -->
+    runlevel ===>> show run level
+    init (number) ===>> change runlevel
 
 
 
