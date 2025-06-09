@@ -1,9 +1,9 @@
 # partitioning
 
         lsblk
-        lsblk -f
-        partion type ===>> linux, raid, swap, lvm
-	        file system ===>> ext4, ext3, ext2 ,xfs
+        lsblk -f ===>> more information
+        partion type ===>> linux, raid, swap, lvm, ...
+	        file system ===>> ext4, ext3, ext2 ,xfs, ...
         <!-- you can see your partions -->
         fdisk /dev/sdb
         <!-- this is for MBR partions -->
@@ -50,7 +50,7 @@
         mkfs.ext4 /dev/sdb1
 
 # type of file system
-        ext4, ext3,ext2, xfs, vfat, ptfs, msdos, fat,btrfs, bfs
+        ext4, ext3,ext2, xfs, vfat, ptfs, msdos, fat,btrfs, bfs, ...
 
 # mount
         mkdir /mnt/hard
