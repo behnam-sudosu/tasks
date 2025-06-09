@@ -1,4 +1,4 @@
-# change log
+# change log directory
     sudo vim /etc/rsyslog.d/50-default.conf
     cron.* ===>> /var/log/cron.log
 
