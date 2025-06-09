@@ -4,6 +4,7 @@
     cd /etc/fail2ban
         /filter.d ===>> config file all application
     systemctl status fail2ban.service ===>> it's not active
+    systemctl enabled fail2ban ===>> first you should active
     
     touch jail.local
 
