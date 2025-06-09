@@ -1,4 +1,3 @@
-<!-- network setting -->
 # config network Ubuntu
 ### set ip static for ubuntu
 1.
@@ -23,7 +22,7 @@
 3.
     sudo netplan try or sudo netplan apply
 
-### set nameserver
+### set nameservers
 
     cd /etc
     <!-- resolv.conf is a link in ubuntu 22.4 -->
