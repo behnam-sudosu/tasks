@@ -42,11 +42,14 @@
 			[share]
 			path = /home/USERNAME/share
 			browseable = yes
+			writable = yes
 			read only = no
 			guest ok = yes
 		save file
 		sudo systemctl restart smbd
 		sudo ufw allow samba
+
+		
 
 	client
 		sudo apt update
