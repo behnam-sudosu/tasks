@@ -32,4 +32,32 @@
     smbclient -L localhost
     smbstatus ===>> who is use this
     net status shares ===>> show information
+
+
+# easy
+	server
+		sudo apt update
+		sudo apt install samba
+		vim /etc/samba/smb.conf
+			[share]
+			path = /home/USERNAME/share
+			browseable = yes
+			read only = no
+			guest ok = yes
+		save file
+		sudo systemctl restart smbd
+
+	client
+		sudo apt update
+		sudo apt install cifs-utils smbclient
+		smbclient //IP_ADDRESS/share -N
+		sudo mount -t cifs //IP_ADDRESS/share /mnt -o guest
+	permanent
+		sudo vim /etc/fstab
+			//IP_ADDRESS/share /mnt/share  cifs  guest,uid=100  0  0
+
+
+
+
+
 			
