@@ -1,4 +1,4 @@
-# FTP server
+# NTP server
 
 ## server
     apt install ntpdate ===>> befor install ntp
